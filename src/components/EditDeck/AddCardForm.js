@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { addCard } from '../../actions/actions'
 
 class AddCardForm extends Component {
     state = {
@@ -11,10 +13,16 @@ class AddCardForm extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        const { polInput, engInput } = this.state;
+        this.props.dispatch(addCard(engInput, polInput));
+        this.setState({
+            engInput: '',
+            polInput: ''
+        });
     }
     render() {
-        const { polInput, engInput } = this.state
-        const { handleChange, handleSubmit } = this
+        const { polInput, engInput } = this.state;
+        const { handleChange, handleSubmit } = this;
         return (
             <div>
                 <form onSubmit={handleSubmit}>
@@ -29,4 +37,4 @@ class AddCardForm extends Component {
     }
 }
 
-export default AddCardForm;
+export default connect()(AddCardForm);
