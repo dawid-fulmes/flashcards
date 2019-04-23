@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import CardListItem from './CardsListItem';
 
 const mapStateToProps = state => ({
     deck: state.deck
@@ -11,8 +12,8 @@ const CardsList = connect(
 )(({ deck }) => {
     return (
         <ul>
-            {deck.map(card => (
-                <li>{card.eng} - {card.pol}</li>
+            {deck.map((card, index) => (
+                <CardListItem key={index} {...card} />
             ))}
         </ul>
     );
