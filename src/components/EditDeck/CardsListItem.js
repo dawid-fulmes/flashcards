@@ -1,8 +1,11 @@
 import React from 'react';
 
-const CardListItem = ({ eng, pol }) => {
+const CardListItem = ({ eng, pol, handleClick }) => {
     return (
-        <li>{eng} = {pol}</li>
+        <li>
+            {eng} = {pol}
+            <button onClick={handleClick}>X</button>
+        </li>
     );
 }
 
