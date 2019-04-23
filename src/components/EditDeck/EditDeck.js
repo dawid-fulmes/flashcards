@@ -1,10 +1,11 @@
 import React from 'react';
 import CardsList from './CardsList';
+import AddCardForm from './AddCardForm';
 
 const EditDeck = () => {
     return (
         <div>
-            <p>Adding Form</p>
+            <AddCardForm />
             <CardsList />
         </div>
     );
