@@ -1,8 +1,7 @@
-const rootReducer = (state = [], action) => {
-    switch (action.type) {
-        default:
-            return state
-    }
-}
+import { combineReducers } from 'redux'
+import deckReducer from './deckReducer'
 
+const rootReducer = combineReducers({
+    deck: deckReducer
+})
 export default rootReducer;
