@@ -1,11 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-const CardsList = () => {
+const mapStateToProps = state => ({
+    deck: state.deck
+})
+
+const CardsList = connect(
+    mapStateToProps,
+    null
+)(({ deck }) => {
     return (
         <ul>
-            CardsList
+            {deck.map(card => (
+                <li>{card.eng} - {card.pol}</li>
+            ))}
         </ul>
     );
-}
+})
 
 export default CardsList;
