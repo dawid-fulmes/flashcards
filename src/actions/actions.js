@@ -16,6 +16,7 @@ export const removeCard = (id) => ({
     id
 })
 
-export const nextCard = () => ({
-    type: "NEXT_CARD"
+export const nextCard = (max) => ({
+    type: "NEXT_CARD",
+    max
 })

@@ -6,10 +6,8 @@ import App from './components/App';
 import rootReducer from './reducers/rootReducer';
 
 const store = createStore(rootReducer)
-
 ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider>,
     document.getElementById('root'));
-console.log(store.getState())
