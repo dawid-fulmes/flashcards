@@ -12,11 +12,21 @@ class CurrentCard extends Component {
         const { isTurned } = this.state
         const { currentCard } = this.props
         const { handleClick } = this
+        const checkButton = (
+            <button>Check</button>
+        )
+        const CorrectWrongButtons = (
+            <>
+                <button>Wrong</button>
+                <button>Correct</button>
+            </>
+        )
         return (
             <div className="current-card">
                 <div onClick={handleClick}>
                     {currentCard.pol}
                     {isTurned ? currentCard.eng : null}
+                    {isTurned ? CorrectWrongButtons : checkButton}
                 </div>
             </div>
         );
