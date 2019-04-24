@@ -15,3 +15,7 @@ export const removeCard = (id) => ({
     type: "REMOVE_CARD",
     id
 })
+
+export const nextCard = () => ({
+    type: "NEXT_CARD"
+})

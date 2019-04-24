@@ -5,13 +5,13 @@ class CurrentCard extends Component {
     state = {
         isTurned: false
     }
-    handleClick = () => {
+    handleTurnClick = () => {
         this.setState({ isTurned: true });
     }
     render() {
         const { isTurned } = this.state
         const { currentCard } = this.props
-        const { handleClick } = this
+        const { handleTurnClick, } = this
         const checkButton = (
             <button>Check</button>
         )
@@ -23,7 +23,7 @@ class CurrentCard extends Component {
         )
         return (
             <div className="current-card">
-                <div onClick={handleClick}>
+                <div onClick={handleTurnClick}>
                     {currentCard.pol}
                     {isTurned ? currentCard.eng : null}
                     {isTurned ? CorrectWrongButtons : checkButton}
