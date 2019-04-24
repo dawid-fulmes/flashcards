@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/Header.scss'
 
 const Header = ({ switchLearnMode, switchEditMode }) => {
     return (
