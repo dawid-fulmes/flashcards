@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ switchLearnMode, switchEditMode }) => {
     return (
         <header>
             <h1>Flashcard</h1>
             <nav>
                 <ul>
-                    <li>Learn</li>
-                    <li>Edit Deck</li>
+                    <li onClick={switchLearnMode}>Learn</li>
+                    <li onClick={switchEditMode}>Edit Deck</li>
                 </ul>
             </nav>
         </header>
