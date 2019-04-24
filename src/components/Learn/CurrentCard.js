@@ -22,7 +22,7 @@ class CurrentCard extends Component {
         )
         const CorrectWrongButtons = (
             <>
-                <button>Wrong</button>
+                <button onClick={handleCorrectClick}>Wrong</button>
                 <button onClick={handleCorrectClick}>Correct</button>
             </>
         )
