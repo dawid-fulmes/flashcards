@@ -10,7 +10,7 @@ class CurrentCard extends Component {
     }
     render() {
         const { isTurned } = this.state
-        const { currentCard } = this.props
+        const { deck, currentCardIndex } = this.props
         const { handleTurnClick, } = this
         const checkButton = (
             <button>Check</button>
@@ -24,8 +24,8 @@ class CurrentCard extends Component {
         return (
             <div className="current-card">
                 <div onClick={handleTurnClick}>
-                    {currentCard.pol}
-                    {isTurned ? currentCard.eng : null}
+                    {deck[currentCardIndex].pol}
+                    {isTurned ? deck[currentCardIndex].eng : null}
                     {isTurned ? CorrectWrongButtons : checkButton}
                 </div>
             </div>
@@ -34,7 +34,8 @@ class CurrentCard extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    currentCard: state.deck[0]
+    currentCardIndex: state.currentCardIndex,
+    deck: state.deck
 })
 
 export default connect(
