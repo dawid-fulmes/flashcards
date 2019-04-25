@@ -3,7 +3,7 @@ import '../style/Header.scss'
 
 const Header = ({ switchLearnMode, switchEditMode }) => {
     return (
-        <header>
+        <header className="main">
             <h1>Flashcard</h1>
             <nav>
                 <ul>
