@@ -11,7 +11,7 @@ class App extends Component {
     const { appMode, switchEditMode, switchLearnMode } = this.props
     return (
       <div className="app">
-        <Header switchEditMode={switchEditMode} switchLearnMode={switchLearnMode} />
+        <Header switchEditMode={switchEditMode} switchLearnMode={switchLearnMode} appMode={appMode} />
         {appMode === "EDIT_MODE" ? <EditDeck /> : null}
         {appMode === "LEARN_MODE" ? <Learn /> : null}
       </div>
