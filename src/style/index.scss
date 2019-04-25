@@ -7,5 +7,17 @@
 html {
     font-size: 10px;
     font-family: 'Lato', 'arial', sans-serif;
-    background-color: #ccc;
+    background-color: #fff;
+
+    @media (min-width: 360px) {
+        font-size: 11px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 13px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 15px;
+    }
 }
