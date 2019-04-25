@@ -4,7 +4,9 @@ import '../../style/Learn.scss'
 
 const Learn = () => {
     return (
-        <CurrentCard />
+        <div className="learn">
+            <CurrentCard />
+        </div>
     );
 }
 
