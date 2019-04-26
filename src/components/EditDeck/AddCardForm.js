@@ -42,21 +42,21 @@ class AddCardForm extends Component {
     render() {
         const { polInput, engInput, errorVisible } = this.state;
         const { handleChange, handleSubmit } = this;
-        const errorMessage = "Each input need at least one letter!";
+        const errorMessage = "At least one letter!";
         return (
             <div>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="field">
                         <label htmlFor="eng">eng:</label>
                         <input type="text" id="eng" value={engInput} name="engInput" onChange={handleChange} />
                     </div>
-                    <div>
+                    <div className="field">
                         <label htmlFor="pol">pol:</label>
                         <input type="text" id="pol" value={polInput} name="polInput" onChange={handleChange} />
                     </div>
                     <button>Add</button>
-                    <p className="errorMessage">{errorVisible ? errorMessage : null}</p>
                 </form>
+                <p className="error-message">{errorVisible ? errorMessage : null}</p>
             </div>
         );
     }
