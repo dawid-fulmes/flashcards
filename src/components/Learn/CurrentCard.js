@@ -29,8 +29,8 @@ class CurrentCard extends Component {
         return (
             <>
                 <div onClick={handleTurnClick} className="current-card">
-                    <p>{deck[currentCardIndex].pol}</p>
-                    <p>{isTurned ? deck[currentCardIndex].eng : null}</p>
+                    <p>{deck[currentCardIndex].eng}</p>
+                    <p>{isTurned ? deck[currentCardIndex].pol : null}</p>
                 </div>
                 <div className="buttons">
                     {isTurned ? CorrectWrongButtons : checkButton}
