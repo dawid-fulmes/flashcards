@@ -5,7 +5,7 @@ import '../../style/EditDeck.scss'
 
 const EditDeck = () => {
     return (
-        <div>
+        <div className="edit-deck">
             <AddCardForm />
             <CardsList />
         </div>
