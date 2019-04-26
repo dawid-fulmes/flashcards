@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 header.main {
     display: flex;
     flex-direction: column;
@@ -24,7 +26,7 @@ header.main {
         li {
             width: 45%;
             text-align: center;
-            background-color: rgb(79, 148, 172);
+            background-color: hsl(195, 37%, 49%);
             line-height: 2;
             font-size: 1.5rem;
             text-transform: uppercase;
@@ -33,8 +35,10 @@ header.main {
             border: 2px solid #000;
 
             &.active {
-                background-color: rgb(141, 195, 212);
+                background-color: hsl(195, 37%, 80%);
             }
+
+            @include mediaHover(hsl(195, 37%, 60%));
         }
     }
 }

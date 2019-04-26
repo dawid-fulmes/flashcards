@@ -1,0 +1,9 @@
+@mixin mediaHover($hoverColor) {
+    @media (min-width: 1024px) {
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hoverColor;
+        }
+    }
+}

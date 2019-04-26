@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 .edit-deck {
     display: flex;
     flex-direction: column;
@@ -43,9 +45,10 @@
                 text-transform: uppercase;
                 min-width: 50%;
                 border: 1px solid #000;
-                background-color: rgb(79, 148, 172);
+                background-color: hsl(195, 37%, 49%);
                 margin: 0.5% 0;
                 outline: none;
+                @include mediaHover(hsl(195, 37%, 60%))
             }
 
         }
@@ -100,7 +103,7 @@
             }
 
             button {
-                background-color: #ccc;
+                background-color: hsl(0, 0%, 60%);
                 color: #000;
                 border: 1px solid #000;
                 font-size: 1.2rem;
@@ -109,6 +112,7 @@
                 height: 30px;
                 border-radius: 50%;
                 outline: none;
+                @include mediaHover(hsl(0, 0%, 80%))
             }
         }
     }

@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 .learn {
     display: flex;
     flex-direction: column;
@@ -39,14 +41,18 @@
             text-transform: uppercase;
             min-width: 50%;
             border: 1px solid #000;
-            background-color: rgb(79, 148, 172);
+            background-color: hsl(195, 37%, 49%);
+
+            @include mediaHover(hsl(195, 37%, 60%));
 
             &.wrong {
-                background-color: rgb(255, 25, 25);
+                background-color: hsl(0, 100%, 55%);
+                @include mediaHover(hsl(0, 100%, 70%));
             }
 
             &.correct {
-                background-color: rgb(25, 255, 25);
+                background-color: hsl(120, 100%, 55%);
+                @include mediaHover(hsl(120, 100%, 70%));
             }
         }
     }
