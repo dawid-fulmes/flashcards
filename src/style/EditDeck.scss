@@ -45,6 +45,7 @@
                 border: 1px solid #000;
                 background-color: rgb(79, 148, 172);
                 margin: 0.5% 0;
+                outline: none;
             }
 
         }
@@ -59,10 +60,56 @@
 
     ul {
         align-self: stretch;
-        background-color: rgb(151, 110, 110);
+        background-color: whitesmoke;
         flex-grow: 1;
         border: 1px solid #000;
         list-style: none;
         margin: 0 2%;
+        height: 100%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track {
+            border-left: 1px solid #000;
+            background-color: whitesmoke
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            padding: 0.5%;
+            border-bottom: 1px dashed #000;
+
+            &:last-child {
+                border-bottom: none;
+
+            }
+
+            p {
+                overflow: hidden;
+                flex-grow: 1;
+                word-wrap: break-word;
+            }
+
+            button {
+                background-color: #ccc;
+                color: #000;
+                border: 1px solid #000;
+                font-size: 1.2rem;
+                margin-left: 5px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                outline: none;
+            }
+        }
     }
 }

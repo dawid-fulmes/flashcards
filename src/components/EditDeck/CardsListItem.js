@@ -3,8 +3,8 @@ import React from 'react';
 const CardListItem = ({ eng, pol, handleClick }) => {
     return (
         <li>
-            {eng} = {pol}
-            <button onClick={handleClick}>X</button>
+            <p>{eng} : {pol}</p>
+            <button onClick={handleClick}><i class="fas fa-trash"></i></button>
         </li>
     );
 }
